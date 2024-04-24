@@ -8,7 +8,7 @@
 
 <p align="left">
 
-<img src="quickPWCR_hex.png" height="200">
+<img src="quickpwcr_hex.png" height="200">
 
 </p>
 
