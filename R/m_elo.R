@@ -18,7 +18,6 @@
 #' @importFrom dplyr left_join
 #' @importFrom dplyr join_by
 #' @importFrom dplyr %>%
-#' @importFrom rlang .data
 #' 
 #' @export
 #' @examples
