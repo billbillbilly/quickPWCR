@@ -6,7 +6,7 @@ double winner_update (double r1, double r2){
   return (1.0 / (1 + pow(10, (r2-r1)/400)));
 }
 
-NumericVector elo_update(NumericVector x, int k) {
+NumericVector elo_update(NumericVector& x, int k) {
   double P_winner = winner_update(x[0], x[1]);
   double P_loser = winner_update(x[1], x[0]);
   double output_rating_winner = x[0] + (k * (1 - P_winner));
@@ -19,12 +19,12 @@ NumericVector elo_update(NumericVector x, int k) {
 NumericVector eloCPP(IntegerMatrix& pwc, NumericVector& scores, int num) {
   NumericVector s = scores;
   for (int i=0; i<num; i++) {
-    int winner = pwc(i,0);
-    int loser = pwc(i,1);
-    double winner_rating = s[winner-1];
-    double loser_rating = s[loser-1];
+    const int winner = pwc(i,0);
+    const int loser = pwc(i,1);
+    const double winner_rating = s[winner-1];
+    const double loser_rating = s[loser-1];
     NumericVector m = {winner_rating, loser_rating};
-    NumericVector updates = elo_update(m, 100);
+    const NumericVector updates = elo_update(m, 100);
     s[winner] = updates[0];
     s[loser] = updates[1];
   }
