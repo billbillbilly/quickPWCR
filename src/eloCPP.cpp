@@ -25,8 +25,8 @@ NumericVector eloCPP(IntegerMatrix& pwc, NumericVector& scores, int num) {
     const double loser_rating = s[loser-1];
     NumericVector m = {winner_rating, loser_rating};
     const NumericVector updates = elo_update(m, 100);
-    s[winner] = updates[0];
-    s[loser] = updates[1];
+    s[winner-1] = updates[0];
+    s[loser-1] = updates[1];
   }
   return s;
 }
