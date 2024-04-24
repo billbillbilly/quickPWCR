@@ -17,6 +17,8 @@
 #' 
 #' @importFrom dplyr left_join
 #' @importFrom dplyr join_by
+#' @importFrom dplyr %>%
+#' @importFrom rlang .data
 #' 
 #' @export
 #' @examples
@@ -53,8 +55,11 @@ m_elo <- function(df_pw,
   rating <- rep(initial_rating, length(allplayers))
   df_j <- data.frame(p=allplayers)
   df_j$index <- as.numeric(row.names(df_j))
-  df_ <- dplyr::left_join(df_pw, df_j, by=dplyr::join_by(Winner==p))
-  df_ <- dplyr::left_join(df_, df_j, by=dplyr::join_by(Loser==p))
+  # df_ <- dplyr::left_join(df_pw, df_j, by=dplyr::join_by(Winner==p))
+  # df_ <- dplyr::left_join(df_, df_j, by=dplyr::join_by(Loser==p))
+  df_ <- df_pw %>%
+    left_join(df_j, by=c('Winner' = 'player')) %>%
+    left_join(df_j, by=c('Loser' = 'player'))
   df_ <- df_[,c(3,4)]
   names(df_) <- c('Winner', 'Loser')
   # iterating through the mean elo iterations

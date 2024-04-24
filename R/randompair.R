@@ -24,7 +24,7 @@ randompair <- function(players, k, cores = 1) {
   if (missing(players) || !is.vector(players)) {
     stop('please input a list of players')
   }
-  if (missing(k) || class(k) != 'numeric') {
+  if (missing(k) || !inherits(k, "numeric")) {
     stop('please input a positive integer for k')
   }
   if (k >= length(players)) {

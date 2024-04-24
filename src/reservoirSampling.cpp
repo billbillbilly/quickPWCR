@@ -10,7 +10,8 @@ IntegerVector reservoirSampling(IntegerVector& indexs, int k)
     results[i] = indexs[i];
   }
   for (int i=k; i<N; ++i) {
-    int random = rand()%(i+1);
+    //int random = rand()%(i+1);
+    int random = R::runif(0, i + 1);
     if (random<k) {
       results[random] = indexs[i];
     }
