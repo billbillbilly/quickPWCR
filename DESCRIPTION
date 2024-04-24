@@ -8,7 +8,7 @@ Description: A collection of functions for constructing large pairwised comparis
              and rating them using Elo rating system with supporting parallel processing.
              The method of random sample pairs is based on Reservoir Sampling proposed by 
              JVitter (1985) <doi.org/10.1145/3147.3165>. 
-License: GPL (>= 2)
+License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.3.1
 Language: en_GB
@@ -22,7 +22,7 @@ VignetteBuilder:
     knitr,
     rmarkdown
 Imports: 
-  Rcpp (>= 1.0.11),
+  Rcpp,
   parallel,
   pbmcapply,
   dplyr

@@ -24,7 +24,7 @@
 #' df <- data.frame(a = c(1,6,0,4,'a','v',9,'n'), b = c('w',3,5,2,'d','j',8,'p'))
 #' pw <- quickPWCR::m_elo(df_pw = df, 
 #'                        wl = c('a', 'b'), 
-#'                        elo_randomisations = 100, 
+#'                        elo_randomisations = 10, 
 #'                        initial_rating = 1000, 
 #'                        k = 100, 
 #'                        cores = 1)
