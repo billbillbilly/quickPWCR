@@ -24,7 +24,9 @@ The method of random sample pairs is based on Reservoir Sampling.
 
 ## Installation 
 ``` r
-# install the package from GitHub
+# install from CRAN
+install.packages("quickPWCR")
+# install the package (develop version) from GitHub
 devtools::install_github("billbillbilly/quickPWCR", dependencies=TRUE)
 ```
 
