@@ -1,6 +1,6 @@
 Package: quickPWCR
 Type: Package
-Title: Quickly construct and rating large binary pairwiesd comparisons
+Title: Quickly construct and rate large binary pairwised comparisons
 Version: 1.0
 Date: 2024-04-23
 Authors@R: person("Xiaohao", "Yang", role = c("aut", "cre", "cph"), email = "xiaohaoy@umich.edu")

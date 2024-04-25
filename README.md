@@ -1,6 +1,9 @@
 <!-- badges: start -->
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![R-CMD-check](https://github.com/billbillbilly/quickPWCR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/billbillbilly/quickPWCR/actions/workflows/R-CMD-check.yaml)
+![CRAN](https://www.r-pkg.org/badges/version/quickPWCR)
+![monthly](https://cranlogs.r-pkg.org/badges/quickPWCR)
+![total](https://cranlogs.r-pkg.org/badges/grand-total/quickPWCR)
 <!-- badges: end -->
 
 
